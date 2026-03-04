@@ -1,8 +1,19 @@
+import { Link } from "react-router-dom";
+import produtos from "../data/produtos";
+
 function Produtos() {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Lista de Produtos</h1>
-      <p>### Em desenvolvimento ###</p>
+      <ul>
+        {produtos.map((produto) => (
+          <li key={produto.id}>
+            <Link to={`/produtos/${produto.id}`}>
+              {produto.nome} {produto.marca}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
