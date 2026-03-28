@@ -6,6 +6,7 @@ function Home() {
 
       <p>Iniciado teste de CI</p>
       <p>Ajuste de CI</p>
+      <p>Teste de PR</p>
     </div>
   );
 }
