@@ -27,7 +27,8 @@ function Detalhe() {
 
 function ProductImage({ id }) {
   const [imgError, setImgError] = useState(false);
-  const src = `/src/images/${id}.jpg`;
+  const src = `/images/${id}.png`;
+  console.log(`Tentando carregar imagem: ${src}`);
   if (imgError) {
     return (
       <div style={{ width: 200, height: 200, background: '#fff', color: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 8, border: '1px solid #ccc', fontWeight: 'bold', fontSize: 16 }}>
