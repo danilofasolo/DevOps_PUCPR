@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav style={{ padding: "20px", background: "#222" }}>
-      <Link to="/" style={{ color: "white", marginRight: "15px" }}>
+    <nav className="navbar-white-border" style={{ padding: "20px" }}>
+      <Link className="navbar-link" to="/" style={{ color: "white", marginRight: "15px" }}>
         Home
       </Link>
 
-      <Link to="/produtos" style={{ color: "white" }}>
+      <Link className="navbar-link" to="/produtos" style={{ color: "white" }}>
         Produtos
       </Link>
     </nav>

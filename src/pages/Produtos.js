@@ -8,7 +8,7 @@ function Produtos() {
       <ul>
         {produtos.map((produto) => (
           <li key={produto.id}>
-            <Link to={`/produtos/${produto.id}`}>
+            <Link className="App-link" to={`/produtos/${produto.id}`}>
               {produto.nome} {produto.marca}
             </Link>
           </li>
