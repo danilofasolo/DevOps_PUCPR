@@ -1,8 +1,24 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renderiza sem crash', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+});
+
+test('renderiza link Home na navbar', () => {
+  render(<App />);
+  const link = screen.getByRole('link', { name: /home/i });
+  expect(link).toBeInTheDocument();
+});
+
+test('renderiza link Produtos na navbar', () => {
+  render(<App />);
+  const link = screen.getByRole('link', { name: /produtos/i });
+  expect(link).toBeInTheDocument();
+});
+
+test('renderiza título da página inicial', () => {
+  render(<App />);
+  const heading = screen.getByRole('heading', { name: /gerenciador de cadastro de produtos/i });
+  expect(heading).toBeInTheDocument();
 });
