@@ -2,7 +2,7 @@ jest.mock('react-router-dom', () => ({
   BrowserRouter: ({ children }) => children,
   Routes: ({ children }) => children,
   Route: () => null,
-}));
+}), { virtual: true });
 
 import { render, screen } from '@testing-library/react';
 import App from './App';
