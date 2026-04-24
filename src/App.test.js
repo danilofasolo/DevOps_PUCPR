@@ -32,3 +32,9 @@ test('renderiza título da página inicial', () => {
   const heading = screen.getByRole('heading', { name: /gerenciador de cadastro de produtos/i });
   expect(heading).toBeInTheDocument();
 });
+
+test('renderiza texto de descrição na Home', () => {
+  render(<App />);
+  const description = screen.getByText(/projeto piloto/i);
+  expect(description).toBeInTheDocument();
+});
