@@ -5,6 +5,7 @@ jest.mock('react-router-dom', () => ({
   Link: ({ children, to }) => <a href={to}>{children}</a>,
   NavLink: ({ children, to }) => <a href={to}>{children}</a>,
   useNavigate: () => jest.fn(),
+  useParams: () => ({ id: '1' }),
 }), { virtual: true });
 
 import { render, screen } from '@testing-library/react';
